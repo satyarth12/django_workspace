@@ -26,9 +26,9 @@
 - Database you can use MySQL / PostgreSQL.
 - No need to host the APIs, You can directly submit the pull request against this repository and your code will be reviewed.
 
+
 > :warning: [Designs Link](https://www.figma.com/file/2hbi9TlIZdxBB6jycyNWws?node-id=0:1#122675486) - This URL is only for the visualization of the flow and Only API development is required.
 
-**Requirements URL** - 
 
 **Steps to follow to submit your code**
 1. Fork the repository
