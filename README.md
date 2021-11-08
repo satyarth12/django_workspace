@@ -8,6 +8,7 @@
 - **Registration API** with User Name, Email and Passowrd
 - **Login API with Email** and Passowrd
 - **Users Listing API** to get List of Names & Email
+- **Profile Update API** to update the profile details like Name, Designation, Profile Picture and Team
 
 **Scope of work**
 - Create REST APIs for the below user journey
@@ -18,7 +19,7 @@
 - Get user listing API should be authenticated against the logged in users and should throw an error if it's not authenticated.
 - Profile Update Put API where user can update Name,  Designation, Profile Picture and Team, This also will be an authenticated API
     - Proifle Picture - User will upload the profile picture this can be either through s3 bucket or local machine
-    - Team - Multi select from the predifined list 
+    - Team - will be multi select from the predifined list provided below 
         - Development
         - Product
         - Design
