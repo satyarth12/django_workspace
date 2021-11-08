@@ -38,9 +38,6 @@
 
 **Please note: git push on this repository is not allowed and only pull requests (PRs) from the forked repositories are allowed**
  
-**Other Information**:
-- Use of frontend frameworks like Bootstrap or Material-UI is allowed
-
 Once you have completed the development, Please raise the pull request from your forked repository, and your work will be reviewed against:
 - **Developed APIs & Models**
 - **Coding Standards**
