@@ -17,7 +17,7 @@
     - Once the user is Logged in, the user should be able to list all the users present on the platform.
     - User list should contain the name and email address of the users.
 - Get user listing API should be authenticated against the logged in users and should throw an error if it's not authenticated.
-- Profile Update Put API where user can update Name,  Designation, Profile Picture and Team, This also will be an authenticated API
+- Profile Update API where user can update Name,  Designation, Profile Picture and Team, This also will be an authenticated API
     - Proifle Picture - User will upload the profile picture this can be either through s3 bucket or local machine
     - Team - will be multi select from the predifined list provided below 
         - Development
