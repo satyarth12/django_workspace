@@ -4,8 +4,6 @@
 
 **Goal**: REST API development, as per the below details
 
-**Requirements URL** - https://www.figma.com/file/2hbi9TlIZdxBB6jycyNWws?node-id=0:1#122675486
-
 **Development of following items**
 - **Registration API** with User Name, Email and Passowrd
 - **Login API with Email** and Passowrd
@@ -18,8 +16,19 @@
     - Once the user is Logged in, the user should be able to list all the users present on the platform.
     - User list should contain the name and email address of the users.
 - Get user listing API should be authenticated against the logged in users and should throw an error if it's not authenticated.
+- Profile Update Put API where user can update Name,  Designation, Profile Picture and Team, This also will be an authenticated API
+    - Proifle Picture - User will upload the profile picture this can be either through s3 bucket or local machine
+    - Team - Multi select from the predifined list 
+        - Development
+        - Product
+        - Design
+        - Human Resource
 - Database you can use MySQL / PostgreSQL.
 - No need to host the APIs, You can directly submit the pull request against this repository and your code will be reviewed.
+
+> :warning: [Designs Link](https://www.figma.com/file/2hbi9TlIZdxBB6jycyNWws?node-id=0:1#122675486) - This URL is only for the visualization of the flow and Only API development is required.
+
+**Requirements URL** - 
 
 **Steps to follow to submit your code**
 1. Fork the repository
