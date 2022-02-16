@@ -1,14 +1,15 @@
-from rest_framework import permissions, generics, status, viewsets
-from rest_framework.response import Response
+from rest_framework import viewsets
 
 from user.serializers.user_serializer import UserSerializer
 
 from user.models import CustomUser
+from user.permission import IsSameUserReadOnly
 
 
 class UserView(viewsets.ModelViewSet):
     serializer_class = UserSerializer
-    httP_method_names = ['GET', 'PATCH', 'PUT', 'HEAD', 'DELETE']
+    permission_classes = (IsSameUserReadOnly,)
+    http_method_names = ['get', 'patch', 'put', 'head', 'delete']
 
     def get_queryset(self):
         return CustomUser.objects.all()
