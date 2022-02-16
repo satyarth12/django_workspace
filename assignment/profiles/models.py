@@ -7,11 +7,15 @@ from user.models import CustomUser
 
 
 class Team(models.Model):
-    name = models.CharField(max_length=100, unique=True)
 
-    def save(self, *args, **kwargs):
-        self.name = self.name.capitalize()
-        super(Team, self).save(*args, **kwargs)
+    class NameTypes(models.TextChoices):
+        DEVELOPMENT = 1, _('Development')
+        PRODUCT = 2, _('Product')
+        DESIGN = 3, _('Design')
+        HUMAN_RESOURCE = 4, _('Human Resource')
+
+    name = models.CharField(max_length=100, unique=True,
+                            choices=NameTypes.choices)
 
     def __str__(self):
         return self.name
