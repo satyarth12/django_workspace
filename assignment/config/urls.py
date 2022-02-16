@@ -23,9 +23,9 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="DesignString Django Assignment",
+        title="DesignString Django API",
         default_version='v1',
-        description="Django Coding Challenge",
+        description="Django Coding Challenge Assignment",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="satyarthdev@protonmail.com"),
         license=openapi.License(name="BSD License"),
