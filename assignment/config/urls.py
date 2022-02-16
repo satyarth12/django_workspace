@@ -39,6 +39,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('user.urls')),
+    path('profile/', include('profiles.urls')),
 
     # API schema and documentation
     path('schema/', schema_view.with_ui('swagger',
