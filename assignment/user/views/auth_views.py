@@ -1,4 +1,4 @@
-from rest_framework import permissions, generics, status
+from rest_framework import permissions, generics, status, views
 from rest_framework.response import Response
 
 from django.contrib.auth import login
@@ -48,3 +48,11 @@ class LoginView(generics.GenericAPIView):
         return Response({"status": True,
                          "detail": {"user_info": UserSerializer(user).data, "token": token}
                          }, status=status.HTTP_201_CREATED)
+
+
+class LogoutView(views.APIView):
+
+    def post(self, request):
+        # deleting the auth token of user
+        request.user.auth_token.delete()
+        return Response(status=status.HTTP_200_OK)
