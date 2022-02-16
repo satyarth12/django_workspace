@@ -8,7 +8,7 @@ from user.models import CustomUser
 
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    
+
     def save(self, *args, **kwargs):
         self.name = self.name.capitalize()
         super(Team, self).save(*args, **kwargs)
@@ -20,11 +20,12 @@ class Team(models.Model):
 class Profile(models.Model):
 
     user = models.OneToOneField(to=CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=350, help_text=_("User's Full Name"))
+    name = models.CharField(max_length=350, help_text=_(
+        "User's Full Name"), null=True)
     designation = models.CharField(
-        max_length=350, help_text=_("User's Designation"))
+        max_length=350, help_text=_("User's Designation"), null=True)
     profile_picture = models.ImageField(upload_to="media/")
-    team = models.ManyToManyField(Team)
+    team = models.ManyToManyField(Team, null=True, blank=True)
 
     def __str__(self):
         return self.user.email
