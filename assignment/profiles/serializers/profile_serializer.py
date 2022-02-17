@@ -6,7 +6,10 @@ from profiles.models import Profile, Team
 
 class ProfileSerializer(serializers.ModelSerializer):
 
+    profile_team = serializers.ListField()
+
     class Meta:
         model = Profile
-        fields = ('user', 'name', 'designation', 'profile_picture', 'team')
+        fields = ('user', 'name', 'designation',
+                  'profile_picture', 'profile_team')
         read_only_fields = ('user',)
