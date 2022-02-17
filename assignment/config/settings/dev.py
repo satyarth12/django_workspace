@@ -45,7 +45,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 # Path where media is stored
-print(BASE_DIR)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # SWAGGER SETTINGS
