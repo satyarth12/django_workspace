@@ -39,8 +39,10 @@ class ProfileView(generics.UpdateAPIView):
 
         # clearing m2m field
         profile_obj.team.clear()
-        for i in data.get('profile_team').split(','):
-            # adding the given team obj to m2m
-            profile_obj.team.add(i)
+        team = data.get('profile_team')
+        if team:
+            for i in data.get('profile_team').split(','):
+                # adding the given team obj to m2m
+                profile_obj.team.add(i)
 
         return Response(serializer.data)

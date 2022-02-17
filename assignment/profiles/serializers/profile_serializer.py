@@ -6,7 +6,8 @@ from profiles.models import Profile, Team
 
 class ProfileSerializer(serializers.ModelSerializer):
 
-    profile_team = serializers.ListField(required=False)
+    profile_team = serializers.ListField(
+        required=False, help_text="Team object id. Ex: 1")
 
     class Meta:
         model = Profile
