@@ -9,7 +9,7 @@ from user.permission import IsSameUserReadOnly
 class UserView(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     permission_classes = (IsSameUserReadOnly,)
-    http_method_names = ['get', 'patch', 'put', 'head', 'delete']
+    http_method_names = ['get']
 
     def get_queryset(self):
         return CustomUser.objects.all()

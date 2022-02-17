@@ -1,6 +1,7 @@
 # Development settings
 
 from .base import *
+import os
 
 ALLOWED_HOSTS = ['*']
 
@@ -33,6 +34,19 @@ REST_FRAMEWORK = {
 # If True, all origins will be allowed
 CORS_ALLOW_ALL_ORIGINS = ENV_INFO_.getboolean("CORS_ALLOW_ALL")
 
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_URL = '/static/'
+
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+print(BASE_DIR)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # SWAGGER SETTINGS
 SWAGGER_SETTINGS = {
