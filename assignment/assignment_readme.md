@@ -26,6 +26,9 @@
 
   - `python manage.py runserver`
 
+- **Adding Team Options**
+  - POST request on `http://127.0.0.1:8000​/profile​/team​/` can add team options from Development, Product, Design and Human Resource.
+
 ### Swagger Documentation
 
 - For proper understaning of API's usage, visit `http://127.0.0.1:8000/schema/`
